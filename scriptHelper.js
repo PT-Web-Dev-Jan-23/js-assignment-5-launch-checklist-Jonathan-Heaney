@@ -1,9 +1,17 @@
 // Write your helper functions here!
 require('isomorphic-fetch');
 
-function addDestinationInfo(document, name, diameter, star, distance, moons, imageUrl) {
-   // Here is the HTML formatting for our mission target div.
-   /*
+function addDestinationInfo(
+  document,
+  name,
+  diameter,
+  star,
+  distance,
+  moons,
+  imageUrl
+) {
+  // Here is the HTML formatting for our mission target div.
+  /*
                 <h2>Mission Destination</h2>
                 <ol>
                     <li>Name: </li>
@@ -16,28 +24,29 @@ function addDestinationInfo(document, name, diameter, star, distance, moons, ima
    */
 }
 
-function validateInput(testInput) {
-   
-}
+function validateInput(testInput) {}
 
-function formSubmission(document, list, pilot, copilot, fuelLevel, cargoLevel) {
-   
-}
+function formSubmission(
+  document,
+  list,
+  pilot,
+  copilot,
+  fuelLevel,
+  cargoLevel
+) {}
 
 async function myFetch() {
-    let planetsReturned;
+  let planetsReturned;
 
-    planetsReturned = await fetch().then( function(response) {
-        });
+  planetsReturned = await fetch().then(function (response) {});
 
-    return planetsReturned;
+  return planetsReturned;
 }
 
-function pickPlanet(planets) {
-}
+function pickPlanet(planets) {}
 
 module.exports.addDestinationInfo = addDestinationInfo;
 module.exports.validateInput = validateInput;
 module.exports.formSubmission = formSubmission;
-module.exports.pickPlanet = pickPlanet; 
+module.exports.pickPlanet = pickPlanet;
 module.exports.myFetch = myFetch;
