@@ -24,16 +24,28 @@ function addDestinationInfo(
    */
 }
 
-function validateInput(testInput) {}
+function validateInput(testInput) {
+  if (testInput === '') {
+    return 'Empty';
+  } else if (isNaN(testInput)) {
+    return 'Not a Number';
+  } else if (!isNaN(testInput)) {
+    return 'Is a Number';
+  }
+}
 
-function formSubmission(
-  document,
-  list,
-  pilot,
-  copilot,
-  fuelLevel,
-  cargoLevel
-) {}
+function formSubmission(document, pilot, copilot, fuelLevel, cargoLevel) {
+  if (
+    validateInput(pilot) === 'Is a Number' ||
+    validateInput(copilot) === 'Is a Number' ||
+    validateInput(fuelLevel) === 'Not a Number' ||
+    validateInput(cargoLevel) === 'Not a Number'
+  ) {
+    console.log(pilot, copilot, fuelLevel, cargoLevel);
+    alert('Make sure to enter valid information for each field!');
+    event.preventDefault();
+  }
+}
 
 async function myFetch() {
   let planetsReturned;
