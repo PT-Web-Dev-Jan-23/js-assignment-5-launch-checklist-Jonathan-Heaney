@@ -25,6 +25,7 @@ window.addEventListener('load', function () {
         fuelLevelInput.value,
         cargoMassInput.value
       );
+      event.preventDefault();
     }
   });
   let listedPlanets;
