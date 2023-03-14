@@ -24,21 +24,21 @@ function addDestinationInfo(
                 `;
 }
 
-function alertValidation() {
-  let pilotInput = document.querySelector('input[name=pilotName]');
-  let copilotInput = document.querySelector('input[name=copilotName]');
-  let fuelLevelInput = document.querySelector('input[name=fuelLevel]');
-  let cargoMassInput = document.querySelector('input[name=cargoMass]');
-  if (
-    pilotInput.value === '' ||
-    copilotInput.value === '' ||
-    fuelLevelInput.value === '' ||
-    cargoMassInput.value === ''
-  ) {
-    alert('All fields are required!');
-    event.preventDefault();
-  }
-}
+// function alertValidation() {
+//   let pilotInput = document.querySelector('input[name=pilotName]');
+//   let copilotInput = document.querySelector('input[name=copilotName]');
+//   let fuelLevelInput = document.querySelector('input[name=fuelLevel]');
+//   let cargoMassInput = document.querySelector('input[name=cargoMass]');
+//   if (
+//     pilotInput.value === '' ||
+//     copilotInput.value === '' ||
+//     fuelLevelInput.value === '' ||
+//     cargoMassInput.value === ''
+//   ) {
+//     alert('All fields are required!');
+//     event.preventDefault();
+//   }
+// }
 
 function validateInput(testInput) {
   if (testInput === '') {
@@ -61,12 +61,12 @@ function formSubmission(document, list, pilot, copilot, fuelLevel, cargoLevel) {
   } else {
     let faultyItems = document.getElementById('faultyItems');
     let pilotStatus = document.getElementById('pilotStatus');
-    pilotStatus.textContent = `Pilot ${pilot} is ready for launch`;
     let copilotStatus = document.getElementById('copilotStatus');
-    copilotStatus.textContent = `Co-pilot ${copilot} is ready for launch`;
     let launchStatus = document.getElementById('launchStatus');
     let fuelStatus = document.getElementById('fuelStatus');
     let cargoStatus = document.getElementById('cargoStatus');
+    pilotStatus.textContent = `Pilot ${pilot} is ready for launch`;
+    copilotStatus.textContent = `Co-pilot ${copilot} is ready for launch`;
     if (fuelLevel < 10000) {
       fuelStatus.textContent = 'Fuel level too low for launch';
       launchStatus.textContent = 'Shuttle Not Ready for Launch';
